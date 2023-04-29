@@ -3,7 +3,6 @@ public class LargestElementinArray {
     public static void main(String[] args) {
         // create an example array
         int[] arr = {3, 5, 1, 8, 2, 7};
-        //
 
         // find the largest element
         int largest = largest(arr, arr.length);
