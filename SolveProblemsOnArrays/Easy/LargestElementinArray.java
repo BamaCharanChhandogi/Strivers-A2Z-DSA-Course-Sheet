@@ -1,4 +1,4 @@
-package GFG;
+package SolveProblemsOnArrays.Easy;
 public class LargestElementinArray {
     public static void main(String[] args) {
         // create an example array
