@@ -1,4 +1,4 @@
-package Binary_Search.BS_on_1D_Array;
+package Binary_Search.BS_on_1D_Arrays;
 
 public class ImplementLowerBound {
     public static int LowerBound(int arr[],int n,int x){

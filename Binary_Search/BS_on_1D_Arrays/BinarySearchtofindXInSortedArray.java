@@ -1,4 +1,4 @@
-package Binary_Search.BS_on_1D_Array;
+package Binary_Search.BS_on_1D_Arrays;
 
 public class BinarySearchtofindXInSortedArray {
     public static int SearchingX(int arr[],int target){

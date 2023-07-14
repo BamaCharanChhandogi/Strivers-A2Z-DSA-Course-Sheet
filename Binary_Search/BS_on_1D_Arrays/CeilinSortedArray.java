@@ -1,4 +1,4 @@
-package Binary_Search.Floor;
+package Binary_Search.BS_on_1D_Arrays;
 
 import java.util.*;
 
