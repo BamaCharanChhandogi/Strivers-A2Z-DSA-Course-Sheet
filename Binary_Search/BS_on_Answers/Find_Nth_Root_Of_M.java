@@ -1,6 +1,6 @@
 package Binary_Search.BS_on_Answers;
 
-public class FindNthRootOfM {
+public class Find_Nth_Root_Of_M {
     public static int NthRoot(int n, int m) {
         // Write your code here.
         int low=0;
