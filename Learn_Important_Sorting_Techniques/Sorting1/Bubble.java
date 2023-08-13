@@ -1,4 +1,4 @@
-package LearnImportantSortingTechniques.Sorting1;
+package Learn_Important_Sorting_Techniques.Sorting1;
 
 public class Bubble {
     public static void main(String[] args) {
