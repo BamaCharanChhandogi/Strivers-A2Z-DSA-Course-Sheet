@@ -9,7 +9,7 @@ class ListNode {
         this.next = null;
     }
 }
-public class Linked_List_Cycle {
+public class Linked_List_Cycle1 {
     public static boolean hasCycle(ListNode head) {
         ListNode hare=head;
         ListNode turtle=head;
