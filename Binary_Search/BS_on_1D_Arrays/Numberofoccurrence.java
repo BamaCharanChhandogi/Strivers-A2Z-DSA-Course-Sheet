@@ -1,7 +1,5 @@
 package Binary_Search.BS_on_1D_Arrays;
 
-import java.util.*;
-
 public class Numberofoccurrence {
     public static int Numberofoccurrence(int arr[],int n,int k){
         int low=0;

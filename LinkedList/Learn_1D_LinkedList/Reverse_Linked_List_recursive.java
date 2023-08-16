@@ -1,7 +1,5 @@
 package LinkedList.Learn_1D_LinkedList;
 
-import java.util.List;
-
 class ListNode {
     int val;
     ListNode next;
