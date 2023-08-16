@@ -1,4 +1,4 @@
-package LinkedList.Medium_Problems_of_LL;
+
 
 class ListNode {
     int val;
