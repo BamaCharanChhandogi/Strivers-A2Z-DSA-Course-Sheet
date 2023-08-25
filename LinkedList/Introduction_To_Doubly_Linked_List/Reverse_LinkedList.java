@@ -12,17 +12,22 @@ class Node{
     }
 }
 
-public class Insert_at_end_of_Doubly_linked_List {
-    public static Node insertAtTail(Node list, int K) {
-        // Write your code here
-        Node curr=list;
-        while(curr.next!=null) {
-            curr=curr.next;
+public class Reverse_LinkedList {
+    public static Node reverseDLL(Node head)
+    {
+        // Write your code here.
+        if(head==null || head.next==null)
+            return head;
+        Node prev=null;
+        Node curr=head;
+        while(curr!=null){
+            Node temp=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=temp;
         }
-        Node newNode=new Node(K);
-        curr.next=newNode;
-        newNode.prev=curr;
-        return list;
+        return prev;
+
     }
     public static void main(String[] args) {
         Node arr=new Node(1);
@@ -32,8 +37,7 @@ public class Insert_at_end_of_Doubly_linked_List {
         arr.next.next.prev=arr.next;
         arr.next.next.next=new Node(4);
         arr.next.next.next.prev=arr.next.next;
-        int K=5;
-        Node curr=insertAtTail(arr,K);
+        Node curr=reverseDLL(arr);
         while(curr!=null) {
             System.out.print(curr.data+" ");
             curr=curr.next;
