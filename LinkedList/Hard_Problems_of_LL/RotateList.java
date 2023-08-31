@@ -35,6 +35,8 @@ public class RotateList {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
         // head.next.next.next = new ListNode(4);
         // head.next.next.next.next = new ListNode(5);
 
@@ -46,7 +48,7 @@ public class RotateList {
         }
         System.out.println();
 
-        int k=4;
+        int k=1;
         current=rotateRight(head,k);
 
         // Print the modified linked list after deletion
