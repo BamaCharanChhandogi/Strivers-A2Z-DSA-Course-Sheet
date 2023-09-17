@@ -6,7 +6,6 @@ public class Generate_all_binary_strings {
         //base codition
         if(n==ds.length()){
             ans.add(ds);
-            // System.out.println(ds);
             return;
         }
         else{
