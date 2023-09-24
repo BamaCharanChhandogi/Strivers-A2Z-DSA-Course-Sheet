@@ -3,7 +3,7 @@ package Recursion.Subsequences_Pattern;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subsets{
+public class Subsets2{
     public static void subset(List<List<Integer>> ans,int nums[],int ind,List<Integer> ds){
         if(ind==nums.length){
             ans.add(new ArrayList<>(ds));
