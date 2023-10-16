@@ -1,7 +1,7 @@
 package Stack_AND_Queues;
 import java.util.*;
 
-public class p {
+public class NextGreaterElement {
     public static long[] nextLargerElement(long[] arr, int n) { 
         long[] result = new long[n];
         Stack<Integer> stack = new Stack<>();
