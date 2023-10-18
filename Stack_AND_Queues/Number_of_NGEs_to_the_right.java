@@ -2,7 +2,7 @@ package Stack_AND_Queues;
 
 import java.util.Stack;
 
-public class p {
+public class Number_of_NGEs_to_the_right {
     public static int[] count_NGEs(int N, int arr[], int queries, int indices[]) {
     // code here
     int ans[]=new int[queries];
