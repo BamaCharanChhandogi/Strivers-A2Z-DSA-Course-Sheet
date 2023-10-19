@@ -1,4 +1,4 @@
-public class p {
+public class TrappingWater {
     public static long trappingWater(int arr[], int size) { 
         // Your code here\
         int n=size;
