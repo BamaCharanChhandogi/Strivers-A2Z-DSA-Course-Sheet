@@ -3,7 +3,7 @@ package Binary_Trees.Easy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Preorder extends TreeNode {
+public class Preorder {
     private List<Integer> preorderResult = new ArrayList<>();
 
     public List<Integer> preorderTraversal(TreeNode root) {

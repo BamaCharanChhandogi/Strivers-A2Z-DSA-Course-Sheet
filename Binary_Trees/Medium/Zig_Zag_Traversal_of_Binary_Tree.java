@@ -1,23 +1,5 @@
 package Binary_Trees.Medium;
 import java.util.*;
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
 public class Zig_Zag_Traversal_of_Binary_Tree {
     public List<List<Integer>> levelorder(TreeNode root, List<List<Integer>> ans, int level) {
         if (root == null)

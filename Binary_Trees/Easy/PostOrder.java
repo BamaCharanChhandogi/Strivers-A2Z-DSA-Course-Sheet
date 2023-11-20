@@ -3,7 +3,7 @@ package Binary_Trees.Easy;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostOrder extends TreeNode {
+public class PostOrder{
     List<Integer> ans=new ArrayList<>();
     public List<Integer> postorderTraversal(TreeNode root) {
         postorder(root);

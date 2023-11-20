@@ -18,7 +18,7 @@ class TreeNode {
     }
 }
 
-public class Maximum_Depth_of_Binary_Tree extends TreeNode {
+public class Maximum_Depth_of_Binary_Tree {
     public int maxDepth(TreeNode root) {
         if(root==null){
             return 0;
