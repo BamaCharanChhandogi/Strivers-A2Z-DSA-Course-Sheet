@@ -1,23 +1,13 @@
 package Binary_Trees.Medium;
 
 public class Diameter_of_Binary_Tree extends TreeNode{
-    int maxDiameter = 0;
 
-    public int diameterOfBinaryTree(TreeNode root) {
-        calculateDiameter(root);
-        return maxDiameter;
-    }
-
-    private int calculateDiameter(TreeNode node) {
+    public int diameterOfBinaryTree(TreeNode node) {
         if (node == null) return 0;
-
-        int leftHeight = calculateDiameter(node.left);
-        int rightHeight = calculateDiameter(node.right);
-
-        // Update the maximum diameter
-        maxDiameter = Math.max(maxDiameter, leftHeight + rightHeight);
-
-        // Return the height of the current node
+        // calculateDiameter(root);
+        int leftHeight = diameterOfBinaryTree(node.left);
+        int rightHeight = diameterOfBinaryTree(node.right);
+        System.out.println("leftHeight: " + leftHeight + " rightHeight: " + rightHeight);
         return Math.max(leftHeight, rightHeight) + 1;
     }
 
