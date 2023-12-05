@@ -36,8 +36,7 @@ public class Balanced_Binary_Tree {
         root.left.left= new TreeNode(4);
         root.left.right = new TreeNode(5);
 
-        Balanced_Binary_Tree solution = new Balanced_Binary_Tree();
-        boolean result = solution.isBalanced(root);
+        boolean result = Balanced_Binary_Tree.isBalanced(root);
         System.out.println(result);
     }
 }
