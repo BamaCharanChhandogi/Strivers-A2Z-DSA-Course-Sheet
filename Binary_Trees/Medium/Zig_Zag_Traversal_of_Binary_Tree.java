@@ -1,29 +1,29 @@
 package Binary_Trees.Medium;
+
 import java.util.*;
+
 public class Zig_Zag_Traversal_of_Binary_Tree {
-    public List<List<Integer>> levelorder(TreeNode root, List<List<Integer>> ans, int level) {
-        if (root == null)
-            return ans;
-
-        if (ans.size() == level)
-            ans.add(new ArrayList<>());
-
-        // Modify this part to add elements in reverse order when needed
-        if (level % 2 == 0) {
-            ans.get(level).add(root.val);
-        } else {
-            ans.get(level).add(0, root.val);
-        }
-
-        levelorder(root.left, ans, level + 1);
-        levelorder(root.right, ans, level + 1);
-
-        return ans;
-    }
-
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        Queue<TreeNode> queue=new LinkedList<TreeNode>();
         List<List<Integer>> ans = new ArrayList<>();
-        levelorder(root, ans, 0);
+
+        if(root==null) return ans;
+        queue.offer(root);
+        boolean zig=false;
+        while(!queue.isEmpty()){
+            int levelOrder = queue.size();
+            List<Integer> sublist = new LinkedList<>();
+            for(int i=0;i<levelOrder;i++){
+                if(queue.peek().left!=null) queue.offer(queue.peek().left);
+                if(queue.peek().right!=null) queue.offer(queue.peek().right);
+                sublist.add(queue.poll().val);
+            }
+            if(zig){
+                 Collections.reverse(sublist);
+            }
+            ans.add(sublist);
+            zig=!zig;
+        }
         return ans;
     }
 
