@@ -1,8 +1,8 @@
-package gfhg;
+package Strings.Medium_String_Problems;
 import java.util.HashMap;
 
 // beauty sum is the difference of highly frequent character and least frequent character
-public class SS {
+public class SumOfBeautyOfAllSubstrings {
 
 public static void main(String[] args) {
 	String str = "cbbccddcddccb";
