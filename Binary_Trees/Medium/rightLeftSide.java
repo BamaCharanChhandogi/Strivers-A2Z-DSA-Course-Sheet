@@ -14,47 +14,46 @@ class Node {
     }
 }
 
-class Pair {
-    Node node;
+class Pair{
     int hd;
-
-    public Pair(Node node, int hd) {
+    Node node;
+    public Pair(Node node,int hd){
         this.node = node;
         this.hd = hd;
     }
 }
 
-public class TopView {
+public class rightLeftSide {
     // Function to return a list of nodes visible from the top view
     // from left to right in Binary Tree.
-    static ArrayList<Integer> topView(Node root) {
-        ArrayList<Integer> ans = new ArrayList<Integer>();
+    public static List<Integer> rightSideView(Node root) {
+        List<Integer> ans= new ArrayList<>();
+        if(root==null){
+            return ans;
+        }
+        
         Queue<Pair> q = new LinkedList<>();
-        TreeMap<Integer, Integer> map = new TreeMap<>();
-        q.add(new Pair(root, 0));
+        TreeMap<Integer,Integer> map = new TreeMap<>();
+        q.add(new Pair(root,0));
+        int min=0,max=0;
 
-        while (!q.isEmpty()) {
+         while(!q.isEmpty()){
             Pair pair = q.poll();
             int hd = pair.hd;
             Node temp = pair.node;
-
-            if (!map.containsKey(hd)) {
-                map.put(hd, temp.data);
+            map.put(hd,temp.data);
+            min = Math.min(hd,min);
+            max = Math.max(hd,max);
+            if(temp.left!=null){
+                q.add(new Pair(temp.left,hd+1));
             }
-
-            if (temp.left != null) {
-                q.add(new Pair(temp.left, hd - 1));
-            }
-
-            if (temp.right != null) {
-                q.add(new Pair(temp.right, hd + 1));
+            if(temp.right!=null){
+                q.add(new Pair(temp.right,hd+1));
             }
         }
-
-        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            ans.add(entry.getValue());
+        for(int i=min;i<=max;i++){
+            ans.add(map.get(i));
         }
-
         return ans;
     }
 
@@ -67,8 +66,8 @@ public class TopView {
         root.left.right.right = new Node(5);
         root.left.right.right.right = new Node(6);
 
-        ArrayList<Integer> result = topView(root);
+        List<Integer> result = rightSideView(root);
 
-        System.out.println("Top view of the binary tree: " + result);
+        System.out.println("side view of the binary tree: " + result);
     }
 }
