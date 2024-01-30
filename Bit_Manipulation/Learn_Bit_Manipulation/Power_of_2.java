@@ -1,5 +1,6 @@
 package Learn_Bit_Manipulation;
 
+
 public class Power_of_2 {
     public static boolean isPowerofTwo(long n){
         // Your code here
