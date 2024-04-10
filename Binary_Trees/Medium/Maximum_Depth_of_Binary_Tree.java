@@ -1,13 +1,37 @@
 package Binary_Trees.Medium;
 
+import java.util.*;
 public class Maximum_Depth_of_Binary_Tree {
+    // public int maxDepth(TreeNode root) {
+    //     if(root == null){
+    //         return 0;
+    //     }
+    //     int leftHeight = maxDepth(root.left);
+    //     int rightHeight = maxDepth(root.right);
+    //     return Math.max(leftHeight, rightHeight)+1;
+    // }
+    // 2nd approach
     public int maxDepth(TreeNode root) {
-        if(root == null){
+        List<List<Integer>> ans = new ArrayList<>();
+        Queue<TreeNode> qu = new LinkedList<>();
+        qu.add(root);
+        if (root == null) {
             return 0;
         }
-        int leftHeight = maxDepth(root.left);
-        int rightHeight = maxDepth(root.right);
-        return Math.max(leftHeight, rightHeight)+1;
+        while (!qu.isEmpty()) {
+            List<Integer> list = new ArrayList<>();
+            int size = qu.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = qu.poll();
+                if (node.left != null)
+                    qu.add(node.left);
+                if (node.right != null)
+                    qu.add(node.right);
+                list.add(node.val);
+            }
+            ans.add(list);
+        }
+        return ans.size();
     }
 
     public static void main(String[] args) {
