@@ -1,7 +1,7 @@
 package Solve_Problems_on_Arrays;
 import java.util.ArrayList;
 
-public class Solution {
+public class Set_matrix_Zero {
     public void setZeroes(int[][] matrix) {
         ArrayList<Integer> row = new ArrayList<>();
         ArrayList<Integer> col = new ArrayList<>();
@@ -28,7 +28,7 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Set_matrix_Zero solution = new Set_matrix_Zero();
         int[][] matrix = {
             {1, 2, 3},
             {4, 0, 6},
