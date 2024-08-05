@@ -1,19 +1,18 @@
-name: Git History Analysis
+name: Analyze
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - main
 
 jobs:
   analyze:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0  # This ensures all history is fetched
-    - name: Run Git History Analyzer
-      uses: BamaCharanChhandogi/git-analyzer@v1.0.0
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Run Git History Analyzer
+        uses: BamaCharanChhandogi/git-analyzer@v1.0.1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
