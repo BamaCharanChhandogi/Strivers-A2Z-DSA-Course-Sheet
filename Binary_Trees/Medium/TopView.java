@@ -58,6 +58,7 @@ public class TopView {
         return ans;
     }
 
+    
     public static void main(String[] args) {
         // Sample usage
         Node root = new Node(1);
