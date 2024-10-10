@@ -78,7 +78,7 @@ public class Root_To_Node_Path {
         root.left.right.left = new TreeNode(7);
         root.left.right.right = new TreeNode(4);
 
-        Solution sol = new Solution();
+        Root_To_Node_Path sol = new Root_To_Node_Path();
 
         int targetLeafValue = 7;
 
