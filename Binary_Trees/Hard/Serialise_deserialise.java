@@ -27,9 +27,10 @@ public class Serialise_deserialise {
         Queue<TreeNode> q = new LinkedList<>();
         // Start with the root node
         q.offer(root);
+    
 
         // Perform level-order traversal
-        while (!q.isEmpty()) {
+        while (!q.isEmpty()) { // q is not empty
             // Get the front node in the queue
             TreeNode curNode = q.poll();
 
